@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Last Light — A Cinematic Story Experience</title>
+  <meta name="description" content="A fantasy tale of survival, memory, and the final untouched forest." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+<body>
+
+  <!-- ── CURSOR ── -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+
+  <!-- ── PARTICLES ── -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- ── AMBIENT MIST ── -->
+  <div class="mist-layer"></div>
+
+  <!-- ── SCROLL PROGRESS ── -->
+  <div id="progress-bar"></div>
+
+  <!-- ── NAV ── -->
+  <nav>
+    <a href="#hero" class="nav-logo">THE LAST LIGHT</a>
+    <ul class="nav-links">
+      <li><a href="#story">Story</a></li>
+      <li><a href="#characters">Characters</a></li>
+      <li><a href="#audio-section">Listen</a></li>
+      <li><a href="#comic-section">Journey</a></li>
+      <li><a href="#quote-section">Lore</a></li>
+    </ul>
+  </nav>
+
+  <!-- ========================================================
+       1. HERO SECTION — Cover_Page.png as background
+       ======================================================== -->
+  <section id="hero">
+    <!-- Cover_Page.png is set as background in style.css via .hero-bg -->
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">A Cinematic Comic Experience</p>
+      <h1 class="hero-title">THE LAST LIGHT</h1>
+      <p class="hero-subtitle">
+        A fantasy tale of survival, memory,<br>and the final untouched forest.
+      </p>
+      <a href="#story" class="hero-cta">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/>
+        </svg>
+        Begin the Journey
+      </a>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+      <span class="scroll-text">Scroll</span>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       2. STORY INTRO SECTION
+       ======================================================== -->
+  <section id="story">
+    <div class="story-inner">
+      <span class="section-label reveal">The World</span>
+      <h2 class="section-title reveal reveal-delay-1">Where It All Began</h2>
+
+      <div class="glass-card reveal reveal-delay-2">
+        <p>
+          The world is <span class="cyan-accent">broken</span> — swallowed by endless floodwaters
+          after the great climate catastrophe. Humanity escaped upward, building
+          <span class="gold-accent">giant flying industrial cities</span> above the clouds,
+          living like gods while the earth below was forgotten.
+        </p>
+
+        <div class="rune-divider">
+          <span></span>
+          <span class="rune-symbol">✦</span>
+          <span></span>
+        </div>
+
+        <p>
+          <span class="cyan-accent">Lyra</span> is a mechanic — one of thousands who keep the
+          sky-cities alive, dreaming of legends whispered about what lies beneath the mist.
+          One night, a single <span class="gold-accent">blue spark</span> changes everything.
+          She steals a scout glider and descends… into a hidden world of bioluminescent beauty,
+          where ancient forests breathe, where the trees remember what humanity forgot.
+        </p>
+
+        <div class="rune-divider">
+          <span></span>
+          <span class="rune-symbol">✦</span>
+          <span></span>
+        </div>
+
+        <p>
+          But she was not alone. Others follow — and the forest's guardian delivers
+          a warning older than memory: <em>"They must not find this place. Or we all die."</em>
+          Lyra must choose between her people… and the
+          <span class="cyan-accent">last light</span> the world has left.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       3. CHARACTERS SECTION
+       ======================================================== -->
+  <section id="characters">
+    <div class="characters-inner">
+      <span class="section-label reveal">The Cast</span>
+      <h2 class="section-title reveal reveal-delay-1">Characters of the Last Light</h2>
+
+      <div class="characters-grid">
+
+        <!-- Lyra -->
+        <div class="char-card reveal reveal-delay-1" data-role="protagonist">
+          <div class="char-img-wrap">
+            <img src="Lyra.png" alt="Lyra — Main Character" />
+            <div class="char-img-glow"></div>
+            <div class="char-badge">Protagonist</div>
+          </div>
+          <div class="char-info">
+            <h3 class="char-name">Lyra</h3>
+            <p class="char-title">Sky Mechanic &amp; Explorer</p>
+            <div class="char-divider"></div>
+            <p class="char-desc">
+              A brilliant mechanic aboard the floating city, Lyra has always felt the pull of
+              the world below the clouds. Armed with a glowing steampunk compass and an
+              unbreakable will, she becomes the first to breach the mist — and discover
+              what humanity left behind.
+            </p>
+            <div class="char-tags">
+              <span>Brave</span><span>Curious</span><span>Conflicted</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Captain -->
+        <div class="char-card reveal reveal-delay-2" data-role="antagonist">
+          <div class="char-img-wrap">
+            <img src="Captain.png" alt="Airship Captain" />
+            <div class="char-img-glow glow-gold"></div>
+            <div class="char-badge badge-gold">Antagonist</div>
+          </div>
+          <div class="char-info">
+            <h3 class="char-name">The Captain</h3>
+            <p class="char-title">Airship Commander</p>
+            <div class="char-divider divider-gold"></div>
+            <p class="char-desc">
+              A weathered veteran of the sky-cities, the Captain leads the expedition
+              that follows Lyra below the clouds. Driven by duty and ambition, he sees
+              the ancient forest as a resource to be claimed — not a world to be protected.
+            </p>
+            <div class="char-tags tags-gold">
+              <span>Ruthless</span><span>Strategic</span><span>Determined</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Forest Guardian -->
+        <div class="char-card reveal reveal-delay-3" data-role="guardian">
+          <div class="char-img-wrap">
+            <img src="Creature.png" alt="Forest Guardian" />
+            <div class="char-img-glow glow-teal"></div>
+            <div class="char-badge badge-teal">Guardian</div>
+          </div>
+          <div class="char-info">
+            <h3 class="char-name">The Guardian</h3>
+            <p class="char-title">Ancient Forest Spirit</p>
+            <div class="char-divider divider-teal"></div>
+            <p class="char-desc">
+              Older than memory itself, the Guardian is the living embodiment of the
+              bioluminescent forest. Made of bark and glowing energy, it speaks without
+              words — and its message is absolute: <em>protect this place, or watch
+              the last light in the world die.</em>
+            </p>
+            <div class="char-tags tags-teal">
+              <span>Ancient</span><span>Powerful</span><span>Mysterious</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /.characters-grid -->
+    </div>
+  </section>
+
+  <!-- ========================================================
+       4. AUDIO EXPERIENCE — VO_Music.mp3
+       ======================================================== -->
+  <section id="audio-section">
+    <div class="audio-inner">
+      <span class="section-label reveal">Narrated Experience</span>
+      <h2 class="section-title reveal reveal-delay-1">Listen to the Story</h2>
+
+      <p class="audio-label reveal reveal-delay-2">Listen to the narrated journey</p>
+
+      <!-- Orb play button -->
+      <div class="audio-orb-wrap reveal reveal-delay-2" id="orb-wrap">
+        <div class="orb-ring"></div>
+        <div class="orb-ring"></div>
+        <div class="orb-ring"></div>
+        <button class="audio-orb" id="orb-btn" aria-label="Play / Pause">
+          <span id="orb-icon"></span>
+        </button>
+      </div>
+
+      <!-- Animated waveform bars -->
+      <div class="waveform reveal reveal-delay-3"></div>
+
+      <!-- Scrubber -->
+      <div class="audio-progress-wrap reveal reveal-delay-3">
+        <div class="audio-progress-fill"></div>
+      </div>
+      <div class="audio-time reveal reveal-delay-3">
+        <span id="time-current">0:00</span>
+        <span id="time-total">0:00</span>
+      </div>
+
+      <!-- Volume -->
+      <div class="volume-row reveal reveal-delay-3">
+        <span class="volume-icon">♪</span>
+        <input type="range" class="volume-slider" min="0" max="1" step="0.01" value="0.8" aria-label="Volume" />
+        <span class="volume-icon">♫</span>
+      </div>
+
+      <!-- VO_Music.mp3 audio source -->
+      <audio id="main-audio" preload="metadata">
+        <source src="VO_Music.mp3" type="audio/mpeg" />
+        Your browser does not support audio playback.
+      </audio>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       4. COMIC EXPERIENCE — Comic.png
+       ======================================================== -->
+  <section id="comic-section">
+    <div class="comic-inner">
+      <span class="section-label reveal">Read the Story</span>
+      <h2 class="section-title reveal reveal-delay-1">The Journey</h2>
+
+      <!-- Comic.png displayed as the full story comic -->
+      <div class="comic-frame reveal reveal-delay-2">
+        <div class="comic-corner tl"></div>
+        <div class="comic-corner tr"></div>
+        <div class="comic-corner bl"></div>
+        <div class="comic-corner br"></div>
+        <img
+          src="Comic.png"
+          alt="The Last Light — Full Story Comic"
+          loading="lazy"
+        />
+      </div>
+
+      <p class="comic-hint reveal reveal-delay-3">
+        Click the comic to expand &amp; read in full detail
+      </p>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       5. QUOTE SECTION
+       ======================================================== -->
+  <section id="quote-section">
+    <div class="quote-wrap reveal">
+      <div class="quote-glyph">"</div>
+      <blockquote class="quote-text">
+        Some worlds survive not by rebuilding…<br>but by remembering.
+      </blockquote>
+      <cite class="quote-author">— The Last Light</cite>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       6. FOOTER
+       ======================================================== -->
+  <footer>
+    <div class="footer-glow-line"></div>
+    <p class="footer-logo">THE LAST LIGHT</p>
+    <p class="footer-text">Created as an AI storytelling experience</p>
+    <ul class="footer-links">
+      <li><a href="#hero">Top</a></li>
+      <li><a href="#story">Story</a></li>
+      <li><a href="#characters">Characters</a></li>
+      <li><a href="#audio-section">Listen</a></li>
+      <li><a href="#comic-section">Read</a></li>
+    </ul>
+  </footer>
+
+  <!-- ── LIGHTBOX OVERLAY ── -->
+  <div id="lightbox" role="dialog" aria-label="Comic full view">
+    <button id="lightbox-close" aria-label="Close">✕</button>
+    <img src="" alt="The Last Light Comic — Full View" />
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
